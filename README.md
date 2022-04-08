@@ -1,10 +1,10 @@
 # nvim
 
- [![Intro](https://img.shields.io/badge/Neovim-v0.1-success?style=for-the-badge&logo=neovim)](https://github.com/mlanca-c/neovim)
- 
- [![Stars](https://img.shields.io/github/stars/mlanca-c/neovim?color=ffff00&label=Stars&logo=Stars&style=?style=flat)](https://github.com/mlanca-c/neovim)
- [![Size](https://img.shields.io/github/repo-size/mlanca-c/neovim?color=blue&label=Size&logo=Size&style=?style=flat)](https://github.com/mlanca-c/neovim)
- [![Activity](https://img.shields.io/github/last-commit/mlanca-c/neovim?color=red&label=Last%20Commit&style=flat)](https://github.com/mlanca-c/neovim)
+ [![Intro](https://img.shields.io/badge/Neovim-v0.1-success?style=for-the-badge&logo=nvim)](https://github.com/mlanca-c/nvim)
+
+ [![Stars](https://img.shields.io/github/stars/mlanca-c/nvim?color=ffff00&label=Stars&logo=Stars&style=?style=flat)](https://github.com/mlanca-c/nvim)
+ [![Size](https://img.shields.io/github/repo-size/mlanca-c/nvim?color=blue&label=Size&logo=Size&style=?style=flat)](https://github.com/mlanca-c/nvim)
+ [![Activity](https://img.shields.io/github/last-commit/mlanca-c/nvim?color=red&label=Last%20Commit&style=flat)](https://github.com/mlanca-c/nvim)
 
 
 
@@ -16,9 +16,9 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
 
 ## Clone
 
-    git clone git@github.com:mlanca-c/neovim.git ~/.config/nvim
+    git clone git@github.com:mlanca-c/nvim.git ~/.config/nvim
 
-## Install Neovim
+## Install nvim
 
 Ubuntu
 
@@ -37,7 +37,7 @@ Windows
     Download nvim-win64.zip
     Extract the zip.
     Run nvim-qt.exe
-    
+
 ## References
 * [neovim](https://neovim.io)
 * [nvim-from-vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim)
