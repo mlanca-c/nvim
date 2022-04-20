@@ -2,9 +2,7 @@
 -- options.lua
 -- User: mlanca-c
 -- URL: http://github.com/mlanca-c/nvim
--- Version: 0.1
---
--- Description: This is the config options file of neovim.
+-- Version: 2.0
 -------------------------------------------------------------------------------
 
 -- :help options
@@ -29,6 +27,16 @@ local options = {
 							-- is set. 
 	cmdheight=2,			-- number of scren lines to use for the
 							-- command-line.
+	numberwidth = 4,		-- set number column width to 4
+	showmode = false,		-- command line stops showing mode
+	title = true,			-- shows the title
+
+	-- Workspace Options
+	foldenable = false,		-- when off, all folds are open
+	foldmethod = "indent",	-- the kind of folding used for the current window	
+
+	-- Plugins
+	completeopt = { "menu", "menuone", "noselect" }, -- cmp plugin
 
 	-- Window and Tab Options
 	splitbelow = true,	-- force all horizontal splits to go below the current
@@ -37,7 +45,11 @@ local options = {
 						-- current window.
 	showtabline = 2,	-- option specifies when the line with tab page labels
 						-- 2 is for always
+
+
 }
+
+vim.opt.shortmess:append "c"
 
 -- For Key and Value pairs of 'options', do vim.opt[Key] = value
 for k, v in pairs(options) do
