@@ -5,8 +5,9 @@
 -- Version: 2.0
 -------------------------------------------------------------------------------
 
-local status_ok, _ = pcall(require, "plugins")
-if not status_ok then
-  return
-end
-
+-- This calls the 'lua/user/cmp.lua' file
+require "user.setup.cmp"
+-- -- This calls the 'lua/user/telescope.lua' file
+-- require "user.setup.telescope"
+-- -- This calls the 'lua/user/treesitter.lua' file
+-- require "user.setup.treesitter"

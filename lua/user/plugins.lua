@@ -47,22 +47,28 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
+
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-	-- Auto-Complete
+	-- Auto-Complete tool
 	use "hrsh7th/nvim-cmp" -- completion engine plugin for neovim written in Lua
-	use "hrsh7th/cmp-buffer"
-	use "hrsh7th/cmp-path"
-	use "hrsh7th/cmp-cmdline"
-	use "neovim/nvim-lspconfig"
+	use "hrsh7th/cmp-buffer" -- nvim-cmp source for buffer words
+	use "hrsh7th/cmp-path" -- nvim-cmp source for filesystem paths
+	use "hrsh7th/cmp-cmdline" -- command line completion
+	use "saadparwaiz1/cmp_luasnip" -- snipet completion
 	use "hrsh7th/cmp-nvim-lsp"
 
 	-- Sniptes
-	use "L3MON4D3/LuaSnip"
-	use "saadparwaiz1/cmp_luasnip"
+	use "L3MON4D3/LuaSnip" -- snippet engine
+	use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+	-- LSP
+	use "neovim/nvim-lspconfig" -- enable LSP
+	use "williamboman/nvim-lsp-installer"
+	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
 	-- Colorschemes
 	use "sainnhe/sonokai" -- :colorscheme sonokai
@@ -72,4 +78,5 @@ return require('packer').startup(function(use)
 	if PACKER_BOOTSTRAP then
 		require('packer').sync()
 	end
+
 end)
