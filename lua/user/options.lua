@@ -51,6 +51,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.cmd [[set iskeyword+=-]]
 
 -- For Key and Value pairs of 'options', do vim.opt[Key] = value
 for k, v in pairs(options) do
