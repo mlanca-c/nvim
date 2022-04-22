@@ -19,8 +19,8 @@ end
 lsp_installer.on_server_ready(function(server)
 	-- Specifying all default options which will be use to setup all servers
     local opts = {
-		on_attach = on_attach,
-		capabillities = capabillities,
+		on_attach = require("user.setup.lsp.handlers").on_attach,
+		capabillities = require("user.setup.lsp.handlers").capabillities,
 	}
 
     -- (optional) Customize the options passed to the server
