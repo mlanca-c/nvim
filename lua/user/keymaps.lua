@@ -7,9 +7,10 @@
 
 
 -- :help mapping
+
 -- Options for the keymaps
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten Function Name
 local keymap = vim.api.nvim_set_keymap
@@ -66,3 +67,8 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Telescope
+keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
+-- keymap("n", "<Leader>", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<C-f>", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<CR>", opts)
