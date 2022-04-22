@@ -23,9 +23,6 @@ vim.g.maplocallerader = " "
 -- Normal
 -- normal_mode = "n"
 
--- Creating Lexexplore shortcut
-keymap("n", "<Leader>e", ":Lexplore 15<CR>", opts)
-
 -- Update Plugins
 -- keymap("n", "<Leader>u", ":PackerSync<CR>", opts)
 
@@ -67,6 +64,9 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- nvim-tree
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
