@@ -41,4 +41,4 @@ Windows
 ## References
 * [neovim](https://neovim.io)
 * [nvim-from-vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim)
-* [LunarVim](https://github.com/LunarVim)
+* [LunarVim](https://github.com/LunarVim/neovim-from-scratch)
