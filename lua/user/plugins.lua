@@ -74,6 +74,8 @@ return require('packer').startup(function(use)
 
 	-- Colorschemes
 	use "sainnhe/sonokai" -- :colorscheme sonokai
+	use "ChristianChiarulli/nvcode-color-schemes.vim" -- nvcode, onedark, nord,
+													  -- aurora, gruvbox, palenight, snazzy, xoria
 
 	-- TreeSitter
 	use {
