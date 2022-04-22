@@ -13,3 +13,5 @@ require "user.setup.treesitter"
 require "user.setup.lsp"
 -- This calls the 'lua/user/telescope.lua' file
 require "user.setup.telescope"
+-- This calls the 'lua/user/autopairs.lua' file
+require "user.setup.autopairs"
