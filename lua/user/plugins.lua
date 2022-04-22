@@ -53,13 +53,16 @@ return require('packer').startup(function(use)
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+	use "kyazdani42/nvim-tree.lua"  -- file explorer
+	use "windwp/nvim-autopairs" -- autopair plugin that supports multiple characters.
+
 	-- Auto-Complete tool
 	use "hrsh7th/nvim-cmp" -- completion engine plugin for neovim written in Lua
 	use "hrsh7th/cmp-buffer" -- nvim-cmp source for buffer words
 	use "hrsh7th/cmp-path" -- nvim-cmp source for filesystem paths
 	use "hrsh7th/cmp-cmdline" -- command line completion
 	use "saadparwaiz1/cmp_luasnip" -- snipet completion
-	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-nvim-lsp" -- nvim-cmp source for neovim's built-in LSP
 
 	-- Sniptes
 	use "L3MON4D3/LuaSnip" -- snippet engine
@@ -74,12 +77,18 @@ return require('packer').startup(function(use)
 
 	-- TreeSitter
 	use {
-		'nvim-treesitter/nvim-treesitter',
+		"nvim-treesitter/nvim-treesitter",
 		run = ':TSUpdate'
     }
 
 	-- Telescope
-	use "nvim-telescope/telescope.nvim"
+	use {
+		'nvim-telescope/telescope.nvim',
+
+		requires = {
+			{'nvim-lua/plenary.nvim'},
+		},
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
