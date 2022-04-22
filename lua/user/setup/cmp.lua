@@ -64,9 +64,10 @@ cmp.setup {
 	},
 
 	mapping = {
-		["C-d"] = cmp.mapping.scroll_docs(-4),
-		["C-f"] = cmp.mapping.scroll_docs(4),
-		["C-Space"] = cmp.mapping.complete(),
+
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-u>"] = cmp.mapping.scroll_docs(4),
+
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
 		["<S-CR>"] = cmp.mapping.confirm { select = true },
@@ -123,7 +124,7 @@ cmp.setup {
 	},
 
 	experimental = {
-		ghost_text = true,
+		ghost_text = false,
 	},
 
 	view = {
