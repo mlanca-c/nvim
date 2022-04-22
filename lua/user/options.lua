@@ -25,7 +25,7 @@ local options = {
 							-- below the cursor.
 	sidescrolloff = 8,		-- minimal number of screen columns to keep to the
 							-- left and to the right of the cursor if 'nowrap'
-							-- is set. 
+							-- is set.
 	cmdheight=2,			-- number of scren lines to use for the
 							-- command-line.
 	numberwidth = 4,		-- set number column width to 4

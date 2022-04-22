@@ -9,7 +9,7 @@
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
 	return
-	vim.notify("Failed to load lspconfig")
+	vim.notify("Failed to install lspconfig")
 end
 
 -- This calls the 'lua/user/setup/lsp/lsp-installer.lua' file
