@@ -19,7 +19,8 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
     git clone git@github.com:mlanca-c/nvim.git ~/.config/nvim
 
 ## Plugins
-* [packer.nvim](github.com/wbthomason/packer.nvim): plugin manager
+
+* [packer.nvim](https://github.com/wbthomason/packer.nvim): plugin manager
 * [popup.nvim](github.com/nvim-lua/popup.nvim)
 * [plenary.nvim](github.com/nvim-lua/plenary.nvim)
 * [nvim-cmp](github.com/hrsh7th/nvim-cmp)
