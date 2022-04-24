@@ -18,6 +18,10 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
 
     git clone git@github.com:mlanca-c/nvim.git ~/.config/nvim
 
+## Plugins
+
+* [nvim-cmp](github.com/hrsh7th/nvim-cmp)
+
 ## Install nvim
 
 Ubuntu
