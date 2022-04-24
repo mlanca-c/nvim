@@ -23,3 +23,5 @@ require "user.setup.gitsigns"
 require "user.setup.comment"
 -- This calls the 'lua/user/bufferline.lua' file
 require "user.setup.bufferline"
+-- This calls the 'lua/user/toggleterm.lua' file
+require "user.setup.toggleterm"
