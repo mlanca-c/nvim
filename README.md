@@ -51,6 +51,10 @@ Intall and Configure these plugins:
 * [impatient.nvim](https://github.com/lewis6991/impatient.nvim) -- Speed up loading Lua modules in Neovim to improve startup time.
 * [indentline](https://github.com/lukas-reineke/indent-blankline.nvim) -- Indent guides for Neovim.
 * [alpha](https://github.com/goolord/alpha-nvim) -- A lua powered greeter like vim-startify/dashboard-nvim.
+* [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
+* Multiple cursor support.
+* Add new keymap for vim all documented.
+* Create Documentation for this neovim onfiguration.
 
 ## Install nvim
 
