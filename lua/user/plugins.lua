@@ -111,7 +111,7 @@ return require('packer').startup(function(use)
 	use "akinsho/bufferline.nvim" -- buffline with tabpage integration
 	use "moll/vim-bbye" -- allows to close buffers without closing or messing up layout
 	use "akinsho/toggleterm.nvim" -- plugin to toggle multiple terminals
-	-- use "nvim-lualine/lualine.nvim" -- neovim statusline
+	use "nvim-lualine/lualine.nvim" -- neovim statusline
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
