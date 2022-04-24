@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
 
 	-- Others
 	use "kyazdani42/nvim-tree.lua" -- file explorer
+	use "kyazdani42/nvim-web-devicons" -- icons for nvim-tree
 	use "windwp/nvim-autopairs" -- autopair plugin that supports multiple characters
 	use "numToStr/Comment.nvim" -- easy comment
 
