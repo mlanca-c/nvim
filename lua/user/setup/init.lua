@@ -21,3 +21,5 @@ require "user.setup.nvim-tree"
 require "user.setup.gitsigns"
 -- This calls the 'lua/user/comment.lua' file
 require "user.setup.comment"
+-- This calls the 'lua/user/bufferline.lua' file
+require "user.setup.bufferline"
