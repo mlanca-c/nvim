@@ -43,6 +43,15 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
 * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) -- A file explorer tree for neovim written in lua.
 * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) -- A lua fork of [vim-devicons](https://github.com/ryanoasis/vim-devicons). This plugin provides the same icons as well as colors for each icon.
 
+## Next Steps
+
+Intall and Configure these plugins:
+* [which-key.nvim](https://github.com/folke/which-key.nvim) -- Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.
+* [project.nvim](https://github.com/ahmedkhalf/project.nvim) -- An all in one Neovim plugin that provides superior project management.
+* [impatient.nvim](https://github.com/lewis6991/impatient.nvim) -- Speed up loading Lua modules in Neovim to improve startup time.
+* [indentline](https://github.com/lukas-reineke/indent-blankline.nvim) -- Indent guides for Neovim.
+* [alpha](https://github.com/goolord/alpha-nvim) -- A lua powered greeter like vim-startify/dashboard-nvim.
+
 ## Install nvim
 
 Ubuntu
