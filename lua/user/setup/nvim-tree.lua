@@ -96,7 +96,7 @@ nvim_tree.setup {
 		custom = {},
 	},
 	git = {
-		enable = false,
+		enable = true,
 		ignore = true,
 		timeout = 500,
 	},
