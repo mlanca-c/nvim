@@ -33,6 +33,7 @@ local options = {
 	title = true,			-- shows the title
 
 	-- Workspace Options
+	mouse = "a",			-- enable mouse
 	foldenable = false,		-- when off, all folds are open
 	foldmethod = "indent",	-- the kind of folding used for the current window
 
