@@ -32,7 +32,7 @@ vim.g.nvim_tree_icons = {
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
-	return
+return
 end
 
 -- key can be either a string or a table of string (lhs)
@@ -51,7 +51,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 --   print(node.absolute_path)
 -- }
 
--- nvim-tree.setup = {
+-- nvim-tree.setup {
 -- 	disable_netrw = true,
 -- }
 

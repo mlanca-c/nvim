@@ -17,3 +17,5 @@ require "user.setup.telescope"
 require "user.setup.autopairs"
 -- This calls the 'lua/user/nvim-tree.lua' file
 require "user.setup.nvim-tree"
+-- This calls the 'lua/user/comment.lua' file
+require "user.setup.comment"
