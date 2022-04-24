@@ -34,7 +34,7 @@ local options = {
 
 	-- Workspace Options
 	foldenable = false,		-- when off, all folds are open
-	foldmethod = "indent",	-- the kind of folding used for the current window	
+	foldmethod = "indent",	-- the kind of folding used for the current window
 
 	-- Plugins
 	completeopt = { "menu", "menuone", "noselect" }, -- cmp plugin
@@ -47,11 +47,19 @@ local options = {
 	showtabline = 2,	-- option specifies when the line with tab page labels
 						-- 2 is for always
 
-
 }
 
 vim.opt.shortmess:append "c"
-vim.cmd [[set iskeyword+=-]]
+local cmd = vim.cmd
+
+cmd [[
+	set iskeyword+=-
+]]
+
+cmd [[
+ autocmd InsertLeave * :set norelativenumber
+ autocmd InsertEnter * :set relativenumber
+]]
 
 -- For Key and Value pairs of 'options', do vim.opt[Key] = value
 for k, v in pairs(options) do
