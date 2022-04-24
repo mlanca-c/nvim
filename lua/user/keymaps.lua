@@ -34,10 +34,10 @@ keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprev<CR>", opts)
 
 -- Resize windows with arrows
-keymap("n", "<C-j>", ":resize -2<CR>", opts)
-keymap("n", "<C-k>", ":resize +2<CR>", opts)
-keymap("n", "<C-l>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<S-j>", ":resize -2<CR>", opts)
+keymap("n", "<S-k>", ":resize +2<CR>", opts)
+keymap("n", "<S-l>", ":vertical resize +2<CR>", opts)
+keymap("n", "<S-h>", ":vertical resize -2<CR>", opts)
 
 -- After searchinig, pressing ecape stops the highlight
 keymap("n", "<Esc>", ":noh<CR><Esc>", opts)
@@ -72,3 +72,10 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
 -- keymap("n", "<Leader>", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<CR>", opts)
+
+-- Terminal --
+-- Better terminal navigation
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
