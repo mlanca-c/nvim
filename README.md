@@ -20,7 +20,8 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
 
 ## Plugins
 
-* [packer.nvim](https://github.com/wbthomason/packer.nvim): inspired plugin/package management for Neovim.
+* [packer.nvim](https://github.com/wbthomason/packer.nvim)
+plugin/package management for Neovim.
 * [popup.nvim](https://github.com/nvim-lua/popup.nvim)
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
