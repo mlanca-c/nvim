@@ -25,3 +25,5 @@ require "user.setup.comment"
 require "user.setup.bufferline"
 -- This calls the 'lua/user/toggleterm.lua' file
 require "user.setup.toggleterm"
+-- This calls the 'lua/user/lualine.lua' file
+require "user.setup.lualine"
