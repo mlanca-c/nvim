@@ -35,7 +35,7 @@ keymap("n", "<S-Tab>", ":bprev<CR>", opts)
 
 -- Resize windows with arrows
 keymap("n", "<S-j>", ":resize -2<CR>", opts)
-keymap("n", "<S-k>", ":resize +2<CR>", opts)
+keymap("n", "<S-k>", ":resize +4<CR>", opts)
 keymap("n", "<S-l>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-h>", ":vertical resize -2<CR>", opts)
 
@@ -72,6 +72,10 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
 -- keymap("n", "<Leader>", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<CR>", opts)
+-- Bufferline
+keymap("n", "<S-w>", ":Bdelete!<CR>", opts)
+-- 42 Header
+keymap("n", "<C-A-h>", ":Stdheader<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation
