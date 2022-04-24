@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
 	-- LSP
 	use "neovim/nvim-lspconfig" -- enable LSP
 	use "williamboman/nvim-lsp-installer" -- LSP installer
+	use "jose-elias-alvarez/null-ls.nvim"-- LSP diagnostics, code actions, and more via Lua
 
 	-- Colorschemes
 	use "sainnhe/sonokai" -- :colorscheme sonokai
@@ -94,11 +95,21 @@ return require('packer').startup(function(use)
 	-- GitHub
 	use "lewis6991/gitsigns.nvim"
 
-	-- Others
+	-- Nvim-Tree
 	use "kyazdani42/nvim-tree.lua" -- file explorer
 	use "kyazdani42/nvim-web-devicons" -- icons for nvim-tree
+
+	-- 42 Studio
+	use {
+		"pbondoer/vim-42header", -- :Stdheader
+		ft = { "c", "cpp" },
+	}
+
+	-- Others
 	use "windwp/nvim-autopairs" -- autopair plugin that supports multiple characters
 	use "numToStr/Comment.nvim" -- easy comment
+	use "akinsho/bufferline.nvim" -- buffline with tabpage integration
+	use "moll/vim-bbye" -- allows to close buffers without closing or messing up layout
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
