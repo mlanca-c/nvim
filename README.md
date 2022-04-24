@@ -14,6 +14,23 @@
 
 This is my configuration of nvim highly inspired in [LunarVim](https://github.com/LunarVim).
 
+## Project
+
+> Neovim look
+<img src="https://github.com/mlanca-c/nvim/blob/main/images/lualine-bufferline.png" alt="drawing" width="1000"/>
+
+> File Explorer
+<img src="https://github.com/mlanca-c/nvim/blob/main/images/find-files.png" alt="drawing" width="1000"/>
+
+> Word Explorer
+<img src="https://github.com/mlanca-c/nvim/blob/main/images/live-grep.png" alt="drawing" width="1000"/>
+
+> Tree
+<img src="https://github.com/mlanca-c/nvim/blob/main/images/nvim-tree.png" alt="drawing" width="1000"/>
+
+> Terminal
+<img src="https://github.com/mlanca-c/nvim/blob/main/images/terminal.png" alt="drawing" width="1000"/>
+
 ## Clone
 
     git clone git@github.com:mlanca-c/nvim.git ~/.config/nvim
