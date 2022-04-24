@@ -23,32 +23,59 @@ require("luasnip/loaders/from_vscode").lazy_load()
 
 -- Adding Fonts
 -- source: https://www.nerdfonts.com/cheat-sheet
+-- local kind_icons = {
+-- 	Text = "",
+-- 	Method = "m",
+-- 	Function = "",
+-- 	Constructor = "",
+-- 	Field = "",
+-- 	Variable = "",
+-- 	Class = "",
+-- 	Interface = "",
+-- 	Module = "",
+-- 	Property = "",
+-- 	Unit = "",
+-- 	Value = "",
+-- 	Enum = "",
+-- 	Keyword = "",
+-- 	Snippet = "",
+-- 	Color = "",
+-- 	File = "",
+-- 	Reference = "",
+-- 	Folder = "",
+-- 	EnumMember = "",
+-- 	Constant = "",
+-- 	Struct = "",
+-- 	Event = "",
+-- 	Operator = "",
+-- 	TypeParameter = "",
+-- }
 local kind_icons = {
-	Text = "",
-	Method = "m",
-	Function = "",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "",
-	Interface = "",
-	Module = "",
-	Property = "",
-	Unit = "",
-	Value = "",
-	Enum = "",
-	Keyword = "",
-	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = "",
+	Text = " (text)",
+	Method = "m (method)",
+	Function = " (function)",
+	Constructor = " (constructor)",
+	Field = " (field)",
+	Variable = " (variable)",
+	Class = " (class)",
+	Interface = " (interface)",
+	Module = " (module)",
+	Property = " (property)",
+	Unit = " (unit)",
+	Value = " (value)",
+	Enum = " (enum)",
+	Keyword = " (keyword)",
+	Snippet = " (snippet)",
+	Color = " (color)",
+	File = " (file)",
+	Reference = " (reference)",
+	Folder = " (folder)",
+	EnumMember = " (enum member)",
+	Constant = " (constant)",
+	Struct = " (struct)",
+	Event = " (event)",
+	Operator = " (operator)",
+	TypeParameter = " (type parameter)",
 }
 
 cmp.setup {
@@ -72,28 +99,28 @@ cmp.setup {
 		["<C-j>"] = cmp.mapping.select_next_item(),
 		["<S-CR>"] = cmp.mapping.confirm { select = true },
 		["<CR>"] = cmp.mapping.confirm { select = false },
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jump() then
-				fallback()
-			else
-				fallback()
-			end
-		end, {"i", "s"}
-		),
-		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, {"i", "s",}
-		),
+		-- ["<Tab>"] = cmp.mapping(function(fallback)
+		-- 	if cmp.visible() then
+		-- 		cmp.select_next_item()
+		-- 	elseif luasnip.expandable() then
+		-- 		luasnip.expand()
+		-- 	elseif luasnip.expand_or_jump() then
+		-- 		fallback()
+		-- 	else
+		-- 		fallback()
+		-- 	end
+		-- end, {"i", "s"}
+		-- ),
+		-- ["<S-Tab>"] = cmp.mapping(function(fallback)
+		-- 	if cmp.visible() then
+		-- 		cmp.select_prev_item()
+		-- 	elseif luasnip.jumpable(-1) then
+		-- 		luasnip.jump(-1)
+		-- 	else
+		-- 		fallback()
+		-- 	end
+		-- end, {"i", "s",}
+		-- ),
 	},
 
 	formatting = {
