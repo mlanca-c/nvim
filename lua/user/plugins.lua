@@ -49,12 +49,13 @@ packer.init {
 return require('packer').startup(function(use)
 
 	-- My plugins here
-	use "wbthomason/packer.nvim" -- Have packer manage itself
-	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+	use "wbthomason/packer.nvim" -- have packer manage itself
+	use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
+	use "nvim-lua/plenary.nvim" -- useful lua functions used ny lots of plugins
 
-	use "kyazdani42/nvim-tree.lua" -- Fie explorer
-	use "windwp/nvim-autopairs" -- autopair plugin that supports multiple characters.
+	use "kyazdani42/nvim-tree.lua" -- file explorer
+	use "windwp/nvim-autopairs" -- autopair plugin that supports multiple characters
+	use "numToStr/Comment.nvim" -- easy comment
 
 	-- Auto-Complete tool
 	use "hrsh7th/nvim-cmp" -- completion engine plugin for neovim written in Lua
@@ -82,6 +83,7 @@ return require('packer').startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ':TSUpdate'
     }
+	use "JoosepAlviste/nvim-ts-context-commentstring" -- treesitter commenting plugin
 
 	-- Telescope
 	use {
@@ -91,9 +93,6 @@ return require('packer').startup(function(use)
 			{'nvim-lua/plenary.nvim'},
 		},
 	}
-
-	-- Git
-	use "lewis6991/gitsigns.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
