@@ -16,3 +16,5 @@ end
 require "user.setup.lsp.lsp-installer"
 -- This calls the 'lua/user/setup/lsp/handlers.lua' setup() function
 require ("user.setup.lsp.handlers").setup()
+-- This calls the 'lua/user/setup/lsp/null-ls.lua' file
+require "user.setup.lsp.null-ls"
