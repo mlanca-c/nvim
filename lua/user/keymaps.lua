@@ -73,7 +73,7 @@ keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require
 -- keymap("n", "<Leader>", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown())<CR>", opts)
 -- Bufferline
-keymap("n", "<S-w>", ":Bdelete!<CR>", opts)
+keymap("n", "<C-c>", ":Bdelete!<CR>", opts)
 -- 42 Header
 keymap("n", "<C-A-h>", ":Stdheader<CR>", opts)
 
