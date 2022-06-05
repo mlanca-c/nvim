@@ -92,8 +92,8 @@ cmp.setup {
 
 	mapping = {
 
-		["<C-d>"] = cmp.mapping.scroll_docs(-4),
-		["<C-u>"] = cmp.mapping.scroll_docs(4),
+		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -145,37 +145,19 @@ cmp.setup {
 		{name = "luasnip"},
 	},
 
-	options = {
-		-- behaviour = cmp.ConfirmBehaviour.Replace,
-		-- select = true,
+	confirm_opts = {
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = false,
+	},
+
+	window = {
+		documentation = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		},
 	},
 
 	experimental = {
 		ghost_text = false,
+		native_menu = false,
 	},
-
-	view = {
-		entries = "native"
-	},
-}
-
--- source: https://github.com/hrsh7th/cmp-cmdline
-cmp.setup.cmdline(":", {
-	sources = {
-		{ name = "cmdline" }
-	}
-})
-cmp.setup.cmdline("/", {
-  sources = {
-    { name = "buffer" }
-  }
-})
-
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
--- The following example advertise capabilities to `clangd`.
-require'lspconfig'.clangd.setup {
-  capabilities = capabilities,
 }
