@@ -18,3 +18,5 @@ require "user.setup.lsp.lsp-installer"
 require ("user.setup.lsp.handlers").setup()
 -- This calls the 'lua/user/setup/lsp/null-ls.lua' file
 require "user.setup.lsp.null-ls"
+-- This calls the 'lua/user/setup/lsp/snipet' directory
+require "user.setup.lsp.snippets"
