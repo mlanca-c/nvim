@@ -50,6 +50,7 @@ require("luasnip/loaders/from_vscode").lazy_load()
 -- 	Operator = "",
 -- 	TypeParameter = "",
 -- }
+
 local kind_icons = {
 	Text = " (text)",
 	Method = "m (method)",
@@ -99,28 +100,28 @@ cmp.setup {
 		["<C-j>"] = cmp.mapping.select_next_item(),
 		["<S-CR>"] = cmp.mapping.confirm { select = true },
 		["<CR>"] = cmp.mapping.confirm { select = false },
-		-- ["<Tab>"] = cmp.mapping(function(fallback)
-		-- 	if cmp.visible() then
-		-- 		cmp.select_next_item()
-		-- 	elseif luasnip.expandable() then
-		-- 		luasnip.expand()
-		-- 	elseif luasnip.expand_or_jump() then
-		-- 		fallback()
-		-- 	else
-		-- 		fallback()
-		-- 	end
-		-- end, {"i", "s"}
-		-- ),
-		-- ["<S-Tab>"] = cmp.mapping(function(fallback)
-		-- 	if cmp.visible() then
-		-- 		cmp.select_prev_item()
-		-- 	elseif luasnip.jumpable(-1) then
-		-- 		luasnip.jump(-1)
-		-- 	else
-		-- 		fallback()
-		-- 	end
-		-- end, {"i", "s",}
-		-- ),
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expandable() then
+				luasnip.expand()
+			elseif luasnip.expand_or_jump() then
+				fallback()
+			else
+				fallback()
+			end
+		end, {"i", "s"}
+		),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, {"i", "s",}
+		),
 	},
 
 	formatting = {
