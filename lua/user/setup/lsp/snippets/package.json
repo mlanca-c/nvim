@@ -1,15 +1,22 @@
 {
-  "name": "nvim-snippets",
-  "author": "mlanca-c",
-  "engines": {
-    "vscode": "^1.11.0"
-  },
-  "contributes": {
-    "snippets": [
-      {
-        "language": "cpp",
-        "path": "./cpp.json"
-      }
-    ]
-  }
+	"name": "nvim-snippets",
+
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+
+	"contributes": {
+		"snippets": [
+
+			{
+				"language": "lua",
+ 		  		"path": "./lua.json"
+			},
+
+			{
+				"language": "cpp",
+				"path": "./cpp.json"
+			}
+		]
+	}
 }

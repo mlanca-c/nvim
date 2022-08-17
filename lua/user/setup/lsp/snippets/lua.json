@@ -1,0 +1,84 @@
+{
+	"lua header": {
+		"prefix": "header",
+		"body": [
+			"--------------------------------------------------------------------------------",
+			"--",
+			"-- ${TM_FILENAME_BASE}.lua",
+			"--",
+			"-- User: mlanca-c",
+			"-- URL: http://github.com/mlanca-c/${WORKSPACE_NAME}",
+			"-- Description: $1",
+			"--------------------------------------------------------------------------------\n$0"
+		],
+		"description": "Header for lua files."
+	},
+
+	"main.lua with love": {
+		"prefix": "love.main",
+		"body": [
+			"-- love.load() it's used to initialize game state at the very beginning.",
+			"function love.load()",
+			"\t$0",
+			"end\n",
+			"-- love.update(dt) updates the state of the game every frame.",
+			"function love.update( dt )",
+			"end\n",
+			"-- love.draw() is called right after love.update(dt) and draws an image to the",
+			"-- window",
+			"function love.draw()",
+			"end"
+		],
+		"description": ""
+	},
+
+	"class with lua": {
+		"prefix": "Class",
+		"body": [
+			"${TM_FILENAME_BASE} = Class{}\n",
+			"-- initializes a ${TM_FILENAME_BASE} object with the right attributes",
+			"function ${TM_FILENAME_BASE}:init($0)",
+			"end\n",
+			"-- updates a ${TM_FILENAME_BASE} object's attributes",
+			"function ${TM_FILENAME_BASE}:update( dt )",
+			"end\n",
+			"-- draws a ${TM_FILENAME_BASE} object to the screen",
+			"function ${TM_FILENAME_BASE}:render()",
+			"end"
+		],
+		"description": "class template in lua."
+	},
+
+	"Love's windows dimensions": {
+		"prefix": "window dimensions",
+		"body": [
+			"-- window dimensions",
+			"WINDOW_WIDTH = 1280",
+			"WINDOW_HEIGHT = 720\n",
+			"-- virtual dimensions for the push library",
+			"VIRTUAL_WIDTH = $1",
+			"VIRTUAL_HEIGHT = $0\n"
+		],
+		"description": "class template in lua."
+	},
+
+	"push library": {
+		"prefix": "push",
+		"body": [
+
+		],
+		"description": "snippet for push library require with the source"
+	},
+
+	"push in love.draw()": {
+		"prefix": "push:start",
+		"body": [
+			"push:start()",
+			"-- drawing starts here\n",
+			"$0",
+			"-- drawing ends here",
+			"push:finish()\n"
+		],
+		"description": "snippet for push in love.draw() function"
+	}
+}
