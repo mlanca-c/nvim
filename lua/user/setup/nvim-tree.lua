@@ -6,33 +6,9 @@
 -------------------------------------------------------------------------------
 
 -- source: https://github.com/kyazdani42/nvim-tree.lua
-
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
-return
+	return
 end
 
 -- key can be either a string or a table of string (lhs)
@@ -47,16 +23,8 @@ end
 -- whats this?
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
--- local function print_node_path(node) {
---   print(node.absolute_path)
--- }
-
--- nvim-tree.setup {
--- 	disable_netrw = true,
--- }
-
-
 nvim_tree.setup {
+	auto_reload_on_write = true,
 	disable_netrw = true, -- Disables LexExplore
 	hijack_netrw = true,
 	open_on_setup = false,
@@ -69,10 +37,6 @@ nvim_tree.setup {
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = true,
-	update_to_buf_dir = {
-		enable = true,
-		auto_open = true,
-	},
 	diagnostics = {
 		enable = true,
 		icons = {
@@ -92,8 +56,9 @@ nvim_tree.setup {
 		args = {},
 	},
 	filters = {
-		dotfiles = false,
+		dotfiles = true,
 		custom = {},
+		exclude = {},
 	},
 	git = {
 		enable = true,
@@ -102,14 +67,13 @@ nvim_tree.setup {
 	},
 	view = {
 		width = 20,
-		height = 20,
 		hide_root_folder = false,
 		side = "left",
-		auto_resize = true,
+		--[[ auto_resize = true, ]]
 		mappings = {
 			custom_only = false,
 			list = {
-				{ key = {"l", "<CR>", "o"}, cb = tree_cb "edit" },
+				{ key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
 				{ key = "h", cb = tree_cb "close_node" },
 				{ key = "v", cb = tree_cb "vsplit" },
 				{ key = "s", cb = tree_cb "split" },
@@ -122,15 +86,43 @@ nvim_tree.setup {
 		cmd = "trash",
 		require_confirm = true,
 	},
-	quit_on_open = 0,
-	git_hl = 1,
-	disable_window_picker = 0,
-	root_folder_modifier = ":t",
-	show_icons = {
-		git = 1,
-		folders = 1,
-		files = 1,
-		folder_arrows = 1,
-		tree_width = 20,
+	renderer = {
+		indent_markers = {
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
+		icons = {
+			show = {
+				file = true,
+				folder = true,
+				folder_arrow = true,
+				git = true,
+			},
+			glyphs = {
+				default = "",
+				symlink = "",
+				folder = {
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+				},
+				git = {
+					unstaged = "",
+					staged = "S",
+					unmerged = "",
+					renamed = "➜",
+					deleted = "",
+					untracked = "U",
+					ignored = "◌",
+				},
+			},
+		},
 	},
 }
