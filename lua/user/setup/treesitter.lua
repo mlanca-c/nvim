@@ -14,15 +14,12 @@ end
 
 configs.setup {
 
-	ensure_installed = { "c", "lua", "rust", "cpp", "cmake" },
-
-	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-
-	ignore_install = { "" }, -- List of parsers to ignore installing
-
-	autopairs = {
-		enable = true,
-	},
+    -- A list of parser names, or "all"
+	ensure_installed = "all",
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+	sync_install = false,
+    -- Automatically install missing parsers when entering buffer
+    auto_install = false,
 
 	highlight = {
 		enable = true, -- false will disable the whole extension
@@ -38,10 +35,5 @@ configs.setup {
 
 	indent = {
 		enable = true,
-	},
-
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
 	},
 }
