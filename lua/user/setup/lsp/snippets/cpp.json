@@ -3,7 +3,6 @@
 		"prefix": "main",
 		"body": [
 			"#include <iostream>",
-			"#include \"Debug.hpp\"",
 			"",
 			"int\tmain( int argc, char *argv[] ) {",
 			"",
@@ -17,19 +16,33 @@
 		],
 		"description": "main.cpp template snippet"
 	},
-	"Canonical Header Template": {
-		"prefix": "header_canonical",
+	"ifndef clause": {
+		"prefix": "#ifndef",
 		"body": [
 			"#ifndef $1",
 			"# define $1",
+			"",
+			"$0",
+			"#endif /* $1 */"
+		],
+		"description": "My code snippet for #ifndef"
+	},
+	"headers" : {
+		"prefix": "Headers",
+		"body": [
 			"",
 			"/* ************************************************************************** */",
 			"/* Headers                                                                    */",
 			"/* ************************************************************************** */",
 			"",
 			"# include <iostream>",
-			"# include \"Debug.hpp\"",
-			"",
+			"# $0"
+		],
+		"description": "My code snippet for includes in header file"
+	},
+	"Canonical Class Definition": {
+		"prefix": "class",
+		"body": [
 			"/* ************************************************************************** */",
 			"/* Class                                                                      */",
 			"/* ************************************************************************** */",
@@ -50,11 +63,12 @@
 			"",
 			"\t\t/* Other Functions */",
 			"",
+			"\t\t/* Exceptions */",
+			"",
 			"\tprivate:",
 			"",
 			"\t\t/* Private Attributes */",
-			"\t$0",
-			"",
+			"\t\t$0",
 			"};",
 			"",
 			"/* ************************************************************************** */",
@@ -62,28 +76,61 @@
 			"/* ************************************************************************** */",
 			"",
 			"std::ostream&\toperator<<( std::ostream& os, ${TM_FILENAME_BASE} const& rhs );",
-			"",
-			"#endif /* $1 */"
+			""
 		],
-		"description": "Canonical Class header snippet"
+		"description": "My code snippet for a canonical class"
 	},
-	"Class Template": {
-		"prefix": "class_implementation",
+	"Class Definition": {
+		"prefix": "class",
 		"body": [
-			"#include \"${TM_FILENAME_BASE}\"",
+			"/* ************************************************************************** */",
+			"/* Class                                                                      */",
+			"/* ************************************************************************** */",
+			"",
+			"class ${TM_FILENAME_BASE} {",
+			"",
+			"\tpublic:",
+			"",
+			"\t\t/* Constructors and Destructors */",
+			"",
+			"\t\t/* Operator Overload */",
+			"",                      	
+			"\t\t/* Getters and Setters */",
+			"",
+			"\t\t/* Other Functions */",
+			"",
+			"\t\t/* Exceptions */",
+			"",
+			"\tprivate:",
+			"",
+			"\t\t/* Private Attributes */",
+			"",
+			"};",
+			""
+		],
+		"description": "My code snippet for a class"
+	},
+	"Canonical Class Implementation": {
+		"prefix": "class",
+		"body": [
+			"#include \"${TM_FILENAME_BASE}.hpp\"",
 			"",
 			"/* ************************************************************************** */",
 			"/* Constructors and Destructors                                               */",
 			"/* ************************************************************************** */",
 			"",
 			"${TM_FILENAME_BASE}::${TM_FILENAME_BASE}( void ) {",
-			"\tDEBUG( \"<${TM_FILENAME_BASE}> default constructor called\" );",
+			"\tDEBUG( \"${TM_FILENAME_BASE} default constructor called\" );",
 			"}",
 			"",
-			"${TM_FILENAME_BASE}::~${TM_FILENAME_BASE}( void ) { DEBUG( \"<${TM_FILENAME_BASE}> destructor called\" ); }",
+			"${TM_FILENAME_BASE}::~${TM_FILENAME_BASE}( void ) {",
+			"\tDEBUG( \"${TM_FILENAME_BASE} destructor called\" );",
+			"}",
 			"",
 			"${TM_FILENAME_BASE}::${TM_FILENAME_BASE}( ${TM_FILENAME_BASE} const& src ) {",
-			"\tDEBUG( \"<${TM_FILENAME_BASE}> copy constructor called\" );",
+			"",
+			"\t*this = src;",
+			"\tDEBUG( \"${TM_FILENAME_BASE} copy constructor called\" );",
 			"}",
 			"",
 			"/* ************************************************************************** */",
@@ -91,6 +138,7 @@
 			"/* ************************************************************************** */",
 			"",
 			"${TM_FILENAME_BASE}&\t${TM_FILENAME_BASE}::operator=( ${TM_FILENAME_BASE} const& rhs ) {",
+			"",
 			"\t$0",
 			"\treturn ( *this );",
 			"}",
@@ -106,8 +154,62 @@
 			"/* ************************************************************************** */",
 			"/* Other Functions                                                            */",
 			"/* ************************************************************************** */",
+			"",
+			"/* ************************************************************************** */",
+			"/* Class Exceptions                                                           */",
+			"/* ************************************************************************** */",
 			""
 		],
-		"description": "Canonical Class header snippet"
+		"description": "My code snippet for canonical class Implementation"
+	},
+	"Class Implementation": {
+		"prefix": "class",
+		"body": [
+			"#include \"${TM_FILENAME_BASE}.hpp\"",
+			"",
+			"/* ************************************************************************** */",
+			"/* Constructors and Destructors                                               */",
+			"/* ************************************************************************** */",
+			"",
+			"${TM_FILENAME_BASE}::${TM_FILENAME_BASE}( void ) {",
+			"}",
+			"",
+			"${TM_FILENAME_BASE}::~${TM_FILENAME_BASE}( void ) {",
+			"}",
+			"",
+			"/* ************************************************************************** */",
+			"/* Getters and Setters                                                        */",
+			"/* ************************************************************************** */",
+			"",
+			"/* ************************************************************************** */",
+			"/* Other Functions                                                            */",
+			"/* ************************************************************************** */",
+			"",
+			"/* ************************************************************************** */",
+			"/* Class Exceptions                                                           */",
+			"/* ************************************************************************** */",
+			""
+		],
+		"description": "My code snippet for class Implementation"
+	},
+	"Exception Definition": {
+		"prefix": "Exceptions",
+		"body": [
+			"\t\tclass $1 : public std::exception {",
+			"\t\t\tpublic:",
+			"\t\t\t\tchar const*\twhat( void ) const throw();",
+			"\t\t};",
+			""
+		],
+		"description": "My code snippet for exception class definition"
+	},
+	"Exception Implementation": {
+		"prefix": "Exceptions",
+		"body": [
+			"char const*\t${TM_FILENAME_BASE}::$1::what( void ) const throw() {",
+			"\treturn ( \"${TM_FILENAME_BASE}: Exception: $2\" );",
+			"}"
+		],
+		"description": "My code snippet for exception Implementation"
 	}
 }
