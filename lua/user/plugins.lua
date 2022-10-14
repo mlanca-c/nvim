@@ -99,6 +99,9 @@ return require('packer').startup(function(use)
 	use "kyazdani42/nvim-tree.lua" -- file explorer
 	use "kyazdani42/nvim-web-devicons" -- icons for nvim-tree
 
+	-- Which Key
+	use "folke/which-key.nvim"
+
 	-- 42 Studio
 	use {
 		"pbondoer/vim-42header", -- :Stdheader

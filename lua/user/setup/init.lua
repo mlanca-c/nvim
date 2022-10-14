@@ -27,3 +27,5 @@ require "user.setup.bufferline"
 require "user.setup.toggleterm"
 -- This calls the 'lua/user/lualine.lua' file
 require "user.setup.lualine"
+-- This calls the 'lua/user/which-key.lua' file
+require "user.setup.which-key"

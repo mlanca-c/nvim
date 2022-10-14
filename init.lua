@@ -13,5 +13,7 @@ require "user.keymaps"
 require "user.colorscheme"
 -- This calls the 'lua/user/plugins.lua' file
 require "user.plugins"
+-- This calls the 'lua/user/functions.lua' file
+require "user.functions"
 -- This calls the 'lua/user/setup' directory
 require "user.setup" -- contains all plugin specific setup configs

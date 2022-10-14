@@ -48,6 +48,8 @@ local options = {
 	showtabline = 2,	-- option specifies when the line with tab page labels
 						-- 2 is for always
 
+	timeoutlen = 100,	-- time to wait for a command sequence to complete
+
 }
 
 vim.opt.shortmess:append "c"

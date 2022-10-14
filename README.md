@@ -6,8 +6,6 @@
  [![Size](https://img.shields.io/github/repo-size/mlanca-c/nvim?color=blue&label=Size&logo=Size&style=?style=flat)](https://github.com/mlanca-c/nvim)
  [![Activity](https://img.shields.io/github/last-commit/mlanca-c/nvim?color=red&label=Last%20Commit&style=flat)](https://github.com/mlanca-c/nvim)
 
-
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Neovim-mark.svg/1200px-Neovim-mark.svg.png" alt="drawing" width="200"/>
 
 > Neovim is a hyperextensible Vim-based text editor fully compatible with Vim's editing model and Vimscript v1.
@@ -59,18 +57,17 @@ This is my configuration of nvim highly inspired in [LunarVim](https://github.co
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) --  Git integration for buffers.
 * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) -- A file explorer tree for neovim written in lua.
 * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) -- A lua fork of [vim-devicons](https://github.com/ryanoasis/vim-devicons). This plugin provides the same icons as well as colors for each icon.
+* [which-key.nvim](https://github.com/folke/which-key.nvim) -- Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.
 
 ## Next Steps
 
 Intall and Configure these plugins:
-* [which-key.nvim](https://github.com/folke/which-key.nvim) -- Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.
 * [project.nvim](https://github.com/ahmedkhalf/project.nvim) -- An all in one Neovim plugin that provides superior project management.
 * [impatient.nvim](https://github.com/lewis6991/impatient.nvim) -- Speed up loading Lua modules in Neovim to improve startup time.
 * [indentline](https://github.com/lukas-reineke/indent-blankline.nvim) -- Indent guides for Neovim.
 * [alpha](https://github.com/goolord/alpha-nvim) -- A lua powered greeter like vim-startify/dashboard-nvim.
 * [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
 * Multiple cursor support.
-* Add new keymap for vim all documented.
 * Create Documentation for this neovim onfiguration.
 
 ## Install nvim
