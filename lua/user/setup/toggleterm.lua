@@ -14,10 +14,11 @@ end
 
 toggleterm.setup({
 	size = 20,
-	open_mapping = [[<c-\>]],
+	open_mapping = [[<Leader-T>]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
+	autochdir = false,
 	shading_factor = 2,
 	start_in_insert = true,
 	insert_mappings = true,

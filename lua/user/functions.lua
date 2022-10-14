@@ -16,4 +16,13 @@ M.toggle_colorcolumn = function()
 	end
 end
 
+M.quit_buffer = function()
+	vim.cmd [[
+		Bdelete!
+	]]
+	vim.cmd [[
+		q!
+	]]
+end
+
 return M
