@@ -69,26 +69,28 @@ return require('packer').startup(function(use)
 	-- LSP
 	use "neovim/nvim-lspconfig" -- enable LSP
 	use "williamboman/nvim-lsp-installer" -- LSP installer
-	use "jose-elias-alvarez/null-ls.nvim"-- LSP diagnostics, code actions, and more via Lua
+	use "jose-elias-alvarez/null-ls.nvim" -- LSP diagnostics, code actions, and more via Lua
 
 	-- Colorschemes
 	use "sainnhe/sonokai" -- :colorscheme sonokai
 	use "ChristianChiarulli/nvcode-color-schemes.vim" -- nvcode, onedark, nord,
-													  -- aurora, gruvbox, palenight, snazzy, xoria
+													  -- aurora, gruvbox,
+													  -- palenight, snazzy,
+													  -- xoria
 
 	-- TreeSitter
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		run = ':TSUpdate'
-    }
+	}
 	use "JoosepAlviste/nvim-ts-context-commentstring" -- treesitter commenting plugin
 
 	-- Telescope
 	use {
 		"nvim-telescope/telescope.nvim",
 
-	requires = {
-			{"nvim-lua/plenary.nvim"},
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
 		},
 	}
 

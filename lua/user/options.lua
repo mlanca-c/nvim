@@ -18,7 +18,7 @@ local options = {
 	-- GUI Options
 	number = true,
 	termguicolors = true,
-	guifont = {"Hack", "h10"},	-- for MacOs
+	-- guifont = {"Hack", "h10"},	-- for MacOs
 	cursorline = true,		-- highlight the text line of the cursor with
 							-- cursorLine
 	scrolloff = 8,			-- minimal number of screen lines to keep above and

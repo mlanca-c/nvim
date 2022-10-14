@@ -82,7 +82,7 @@ M.setup = function()
 		)
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-		vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+		-- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format{ async = true }' ]]
 	end
 
 	M.on_attach = function(client, bufnr)
@@ -100,6 +100,6 @@ M.setup = function()
 		return
 	end
 
-	M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+	M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 	return M

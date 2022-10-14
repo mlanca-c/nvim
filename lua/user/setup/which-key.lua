@@ -103,8 +103,8 @@ local mappings = {
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["W"] = { "<cmd>wa!<CR>", "Save All" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
-	["c"] = { "<cmd>lua require('user.functions').quit_buffer()<CR>", "Close Window" },
-	-- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["C"] = { "<cmd>lua require('user.functions').quit_buffer()<CR>", "Close Window" },
 
 	-- Toggle colorcolumn
 	["b"] = { "<cmd>lua require('user.functions').toggle_colorcolumn()<CR>", "toggle colorcolumn at 80"},
@@ -166,7 +166,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<CR>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", "Format" },
 		i = { "<cmd>LspInfo<CR>", "Info" },
 		I = { "<cmd>LspInstallInfo<CR>", "Installer Info" },
 		j = {
