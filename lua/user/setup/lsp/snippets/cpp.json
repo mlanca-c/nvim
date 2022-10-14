@@ -17,7 +17,7 @@
 		"description": "main.cpp template snippet"
 	},
 	"ifndef clause": {
-		"prefix": "#ifndef",
+		"prefix": "ifndef",
 		"body": [
 			"#ifndef $1",
 			"# define $1",
